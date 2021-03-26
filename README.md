@@ -1,46 +1,47 @@
-# Getting Started with Create React App
+## Frontend Code Challenge
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Project
 
-## Available Scripts
+A company wants to develop a home grown fresh plants monitoring system for casual users. The hardware development is still happening, but they want to be in touch with their future customers by providing a solution that already works without their IoT hardware for now and starting collecting feedback from them.
 
-In the project directory, you can run:
+These are the high level requirements for the system:
 
-### `yarn start`
+- User Registration
+- Add/Remove plants/herbs
+  - Give it a name and/or type - ex: Thyme, Basil, Lettuce, etc
+- Register health/status for a given plant and save that as a historical information ( will be captured by the IoT device later )
+  - Soil moisture - 0-100%
+- User Dashboard
+  - Show health status of each plant for the user
+  - Can also show current weather on users location (optional)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Feel free to add or change things on top of that idea. For example, you can register other attributes of the plant, show charts, simulate real time data changes, etc. For the current weather, you can get user location from the browser and use a third party API for weather info.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Share your solution via URL to your git repository and would be cool to either deploy it somewhere or send a video of it working. Don’t need to voice over on top of it or do anything fancy. Loom is a nice tool for that.
 
-### `yarn test`
+### Requirements
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- React
+- State Management ( Redux, Hooks, MobX, etc )
+- CSS (styled-components, CSS modules, or plain CSS/SASS/LESS)
+- For the backend, you can simulate using something like a backend as a service solutions like Firebase, AWS Amplify, Hasura, DGraph or just local with tools like Mirajs and Json-server.
+- For the authentication part, you can offload that to an identity provider like Firebase Auth, Auth0, Cognito, Okta, etc.
 
-### `yarn build`
+### Hints
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- You don't need to spend time creating a dev/build environment. You can use create-react-app (and other alike tools) for that
+- Third-party libraries are allowed.
+- As a company, we believe that communication is the key to success. So if something is not clear to you, or if you have doubts on what you can use, reach the devs
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Happy coding!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<img src="https://user-images.githubusercontent.com/5693916/30273942-84252588-96fb-11e7-9420-5516b92cb1f7.gif" data-canonical-src="https://user-images.githubusercontent.com/5693916/30273942-84252588-96fb-11e7-9420-5516b92cb1f7.gif" width="150" height="150" />
 
-### `yarn eject`
+#### References
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- https://miragejs.com/
+- https://github.com/typicode/json-server
+- https://firebase.google.com/
+- http://auth0.com/
+- https://hasura.io
+- https://medium.com/@Ari_n/8-weather-api-alternatives-now-that-darksky-is-shutting-down-42a5ac395f93
