@@ -1,6 +1,27 @@
 ## Frontend Code Challenge
 
-### Project
+### My Personal Roadmap
+###### Updated: 2021-03-27 21:45 (UTC-4)
+
+✅ Create a React App  
+🕘 Setup formatter and linter  
+[ ] Setup Netlify deploy  
+[ ] Setup React Router
+[ ] Create the login interface integrated with Auth0  
+[ ] Create login and authenticated default layouts  
+[ ] Setup MirageJs as local simulated backend  
+[ ] Create the Plants/Herbs CRUD with Formik and Yup  
+[ ] Create the Dashboard  
+[ ] Do fancy things ✨
+
+### Lets code!
+
+<img src="https://i.giphy.com/media/G6sJqVpD1U4jC/giphy.webp" alt="" width="50%" height="50%">
+
+---
+### Challenge Description
+<details>
+  <summary>Click to expand!</summary>
 
 A company wants to develop a home grown fresh plants monitoring system for casual users. The hardware development is still happening, but they want to be in touch with their future customers by providing a solution that already works without their IoT hardware for now and starting collecting feedback from them.
 
@@ -45,3 +66,4 @@ Share your solution via URL to your git repository and would be cool to either d
 - http://auth0.com/
 - https://hasura.io
 - https://medium.com/@Ari_n/8-weather-api-alternatives-now-that-darksky-is-shutting-down-42a5ac395f93
+</details>
