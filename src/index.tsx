@@ -1,13 +1,24 @@
+import { Auth0Provider } from '@auth0/auth0-react'
+import 'antd/dist/antd.css' // or 'antd/dist/antd.less'
 import React from 'react'
 import ReactDOM from 'react-dom'
-import './index.css'
+import { BrowserRouter as Router } from 'react-router-dom'
 import App from './App'
+import './index.css'
 import reportWebVitals from './reportWebVitals'
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <Auth0Provider
+    domain='chireia.us.auth0.com'
+    clientId='jzf5QNADhEIn3FXA7UiB0PFME4tRpI0z'
+    redirectUri={window.location.origin}
+  >
+    <React.StrictMode>
+      <Router>
+        <App />
+      </Router>
+    </React.StrictMode>
+  </Auth0Provider>,
   document.getElementById('root')
 )
 

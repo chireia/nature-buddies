@@ -1,25 +1,24 @@
-import React from 'react'
-import logo from './logo.svg'
-import './App.css'
+import { useAuth0 } from '@auth0/auth0-react'
+import React, { Suspense } from 'react'
+import { FullScreenLoading } from './components/FullScreenLoading'
+import Layout from './components/Layout'
+import { Routes } from './components/SwitchRoutes'
 
 function App() {
+  const { isAuthenticated, isLoading } = useAuth0()
+  console.log(': isAuthenticated', isAuthenticated)
+
+  if (isLoading) return <FullScreenLoading />
   return (
-    <div className='App'>
-      <header className='App-header'>
-        <img src={logo} className='App-logo' alt='logo' />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className='App-link'
-          href='https://reactjs.org'
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Suspense fallback={<FullScreenLoading />}>
+      {isAuthenticated ? (
+        <Layout>
+          <Routes />
+        </Layout>
+      ) : (
+        <Routes />
+      )}
+    </Suspense>
   )
 }
 
