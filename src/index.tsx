@@ -1,4 +1,6 @@
+import { LoadingOutlined } from '@ant-design/icons'
 import { Auth0Provider } from '@auth0/auth0-react'
+import { Spin } from 'antd'
 import 'antd/dist/antd.css' // or 'antd/dist/antd.less'
 import React from 'react'
 import ReactDOM from 'react-dom'
@@ -6,6 +8,8 @@ import { BrowserRouter as Router } from 'react-router-dom'
 import App from './App'
 import './index.css'
 import reportWebVitals from './reportWebVitals'
+
+Spin.setDefaultIndicator(<LoadingOutlined style={{ fontSize: 24 }} spin />)
 
 ReactDOM.render(
   <Auth0Provider

@@ -39,7 +39,7 @@ const Login: FunctionComponent = () => {
 
 export default Login
 
-const LoginContainer = styled.div`
+export const LoginContainer = styled.div`
   background-image: url(${background});
   background-size: cover;
   background-position: center;
@@ -49,7 +49,7 @@ const LoginContainer = styled.div`
   justify-content: center;
   align-items: center;
 `
-const LoginForm = styled.section`
+export const LoginForm = styled.section`
   position: relative;
   right: 20vw;
   width: 350px;
@@ -77,7 +77,7 @@ const LoginForm = styled.section`
     }
   }
 `
-const LoginImageContainer = styled.div`
+export const LoginImageContainer = styled.div`
   display: flex;
   flex-flow: column wrap;
   align-items: center;

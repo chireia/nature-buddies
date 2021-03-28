@@ -6,7 +6,6 @@ import { Routes } from './components/SwitchRoutes'
 
 function App() {
   const { isAuthenticated, isLoading } = useAuth0()
-  console.log(': isAuthenticated', isAuthenticated)
 
   if (isLoading) return <FullScreenLoading />
   return (
