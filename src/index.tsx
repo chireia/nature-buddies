@@ -4,12 +4,16 @@ import { Spin } from 'antd'
 import 'antd/dist/antd.css' // or 'antd/dist/antd.less'
 import React from 'react'
 import ReactDOM from 'react-dom'
+import { HelmetProvider } from 'react-helmet-async'
 import { BrowserRouter as Router } from 'react-router-dom'
 import App from './App'
 import './index.css'
 import reportWebVitals from './reportWebVitals'
+import { makeServer } from './server'
 
 Spin.setDefaultIndicator(<LoadingOutlined style={{ fontSize: 24 }} spin />)
+
+makeServer()
 
 ReactDOM.render(
   <Auth0Provider
@@ -18,9 +22,11 @@ ReactDOM.render(
     redirectUri={window.location.origin}
   >
     <React.StrictMode>
-      <Router>
-        <App />
-      </Router>
+      <HelmetProvider>
+        <Router>
+          <App />
+        </Router>
+      </HelmetProvider>
     </React.StrictMode>
   </Auth0Provider>,
   document.getElementById('root')

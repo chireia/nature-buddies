@@ -1,8 +1,4 @@
-import {
-  ControlOutlined,
-  DashboardOutlined,
-  HeartOutlined,
-} from '@ant-design/icons'
+import { DashboardOutlined, HeartOutlined } from '@ant-design/icons'
 import { useAuth0 } from '@auth0/auth0-react'
 import { Divider, Layout, Menu } from 'antd'
 import React, { FunctionComponent } from 'react'
@@ -11,7 +7,6 @@ import styled from 'styled-components'
 import logo from '../assets/images/logo-default.png'
 
 const { Sider } = Layout
-const { SubMenu } = Menu
 
 export const LayoutSidebar: FunctionComponent = () => {
   const { user } = useAuth0()
@@ -33,11 +28,9 @@ export const LayoutSidebar: FunctionComponent = () => {
         <Menu.Item key='1' icon={<DashboardOutlined />}>
           <Link to='/'>Dashboard</Link>
         </Menu.Item>
-        <SubMenu title='My Plants' icon={<HeartOutlined />}>
-          <Menu.Item key='2' icon={<ControlOutlined />}>
-            <Link to='/my-plants'>Manage</Link>
-          </Menu.Item>
-        </SubMenu>
+        <Menu.Item key='2' icon={<HeartOutlined />}>
+          <Link to='/my-plants'>My Plants</Link>
+        </Menu.Item>
       </Menu>
     </Sider>
   )
