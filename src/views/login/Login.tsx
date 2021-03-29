@@ -9,9 +9,6 @@ import { useHistory } from 'react-router'
 const Login: FunctionComponent = () => {
   const { loginWithRedirect, isAuthenticated } = useAuth0()
   const { push } = useHistory()
-  const LoginButton = () => (
-    <Button onClick={() => loginWithRedirect()}>Sign In</Button>
-  )
 
   useEffect(() => {
     if (isAuthenticated) {
@@ -21,7 +18,7 @@ const Login: FunctionComponent = () => {
 
   return (
     <LoginContainer>
-      <LoginForm>
+      <LoginFormContainer>
         <LoginImageContainer>
           <img src={logo} alt='' />
           <h2>Nature Buddies</h2>
@@ -29,10 +26,10 @@ const Login: FunctionComponent = () => {
           <span>Insert your credentials to access</span>
         </LoginImageContainer>
 
-        <div className='form-container'>
-          <LoginButton />
-        </div>
-      </LoginForm>
+        <LoginButtonContainer>
+          <Button onClick={() => loginWithRedirect()}>Sign In</Button>
+        </LoginButtonContainer>
+      </LoginFormContainer>
     </LoginContainer>
   )
 }
@@ -49,33 +46,13 @@ export const LoginContainer = styled.div`
   justify-content: center;
   align-items: center;
 `
-export const LoginForm = styled.section`
+export const LoginFormContainer = styled.section`
   position: relative;
   right: 20vw;
   width: 350px;
   padding-top: 20px;
   border-radius: 5px;
   background-color: #fff;
-
-  .form-container {
-    width: 100%;
-    height: auto;
-    padding: 20px;
-    display: flex;
-    flex-flow: column wrap;
-
-    .form {
-      display: flex;
-      flex-flow: column wrap;
-
-      .btn-container {
-        .form__btn {
-          flex-basis: 100%;
-          width: 100%;
-        }
-      }
-    }
-  }
 `
 export const LoginImageContainer = styled.div`
   display: flex;
@@ -87,4 +64,12 @@ export const LoginImageContainer = styled.div`
   h2 {
     margin-bottom: 0;
   }
+`
+export const LoginButtonContainer = styled.div`
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-flow: column wrap;
+  flex-basis: 100%;
+  width: 100%;
 `

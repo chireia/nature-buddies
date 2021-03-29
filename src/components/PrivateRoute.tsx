@@ -13,7 +13,6 @@ const PrivateRoute: FunctionComponent<PrivateRouteProps> = ({
   component,
 }) => {
   const { isAuthenticated } = useAuth0()
-  console.log(': isAuthenticated', isAuthenticated)
 
   return isAuthenticated ? (
     <Route key={key} exact={exact} path={path} component={component} />

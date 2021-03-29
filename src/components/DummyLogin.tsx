@@ -2,8 +2,9 @@ import { Button, Divider } from 'antd'
 import React, { FunctionComponent } from 'react'
 import logo from '../assets/images/logo-default.png'
 import {
+  LoginButtonContainer,
   LoginContainer,
-  LoginForm,
+  LoginFormContainer,
   LoginImageContainer,
 } from '../views/login/Login'
 
@@ -12,7 +13,7 @@ export const DummyLogin: FunctionComponent = () => {
 
   return (
     <LoginContainer style={{ filter: 'blur(3px)' }}>
-      <LoginForm>
+      <LoginFormContainer>
         <LoginImageContainer>
           <img src={logo} alt='' />
           <h2>Nature Buddies</h2>
@@ -20,10 +21,10 @@ export const DummyLogin: FunctionComponent = () => {
           <span>Insert your credentials to access</span>
         </LoginImageContainer>
 
-        <div className='form-container'>
+        <LoginButtonContainer>
           <LoginButton />
-        </div>
-      </LoginForm>
+        </LoginButtonContainer>
+      </LoginFormContainer>
     </LoginContainer>
   )
 }

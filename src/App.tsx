@@ -7,16 +7,16 @@ import { Routes } from './components/SwitchRoutes'
 function App() {
   const { isAuthenticated, isLoading } = useAuth0()
 
-  if (isLoading) return <FullScreenLoading />
-  return (
-    <Suspense fallback={<FullScreenLoading />}>
-      {isAuthenticated ? (
-        <Layout>
-          <Routes />
-        </Layout>
-      ) : (
+  if (isLoading) return <FullScreenLoading dummyLogin />
+  return isAuthenticated ? (
+    <Layout>
+      <Suspense fallback={<FullScreenLoading />}>
         <Routes />
-      )}
+      </Suspense>
+    </Layout>
+  ) : (
+    <Suspense fallback={<FullScreenLoading dummyLogin />}>
+      <Routes />
     </Suspense>
   )
 }

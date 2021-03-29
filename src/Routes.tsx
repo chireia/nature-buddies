@@ -20,6 +20,11 @@ export const routes: AppRouteProps[] = [
     component: lazy(() => import('./views/dashboard/Dashboard')),
   },
   {
+    path: '/my-plants',
+    accessPolice: AccessPolice.Auth,
+    component: lazy(() => import('./views/my-plants/MyPlantsManage')),
+  },
+  {
     path: '/login',
     accessPolice: AccessPolice.Guest,
     component: lazy(() => import('./views/login/Login')),
