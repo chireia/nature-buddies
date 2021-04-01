@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from 'react'
 import { Route, Switch } from 'react-router-dom'
-import { AccessPolice, AppRouteProps, routes } from '../Routes'
+import { AccessPolice, AppRouteProps, routes } from '../routes'
 import PrivateRoute from './PrivateRoute'
 
 const SwitchRoutes: FunctionComponent<{ routeProps: AppRouteProps[] }> = ({

@@ -15,3 +15,7 @@ body {
 .ant-table-pagination.ant-pagination {
   margin: 16px;
 }
+
+.ant-spin-container::after {
+  background: unset;
+}

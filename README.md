@@ -1,7 +1,7 @@
 ## Frontend Code Challenge
 
 ### My Personal Roadmap
-###### Updated: 2021-03-29 17:55 (UTC-4)
+###### Updated: 2021-03-1 3:34 (UTC-4)
 
 - [x] Create a React App
 - [x] Setup formatter and linter
@@ -10,8 +10,8 @@
 - [x] Create default layouts for login and authenticated user
 - [x] Create the login interface integrated with Auth0
 - [x] Setup MirageJs as local simulated backend
-- [ ] Create the Plants/Herbs CRUD with Formik and Yup 🕘
-- [ ] Create the Dashboard
+- [x] Create the Plants/Herbs CRUD with Formik and Yup
+- [ ] Create the Dashboard 🕘
 - [ ] Enhance with optional requirements ✨
 
 ### Let's code!
