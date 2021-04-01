@@ -1,13 +1,13 @@
 import { useEffect } from 'react'
-import { IBreadcrumbItem } from '../stores/LayoutStore'
+import { BreadcrumbItem } from '../stores/LayoutStore'
 import { useStore } from './useStore'
 
-export interface IPageOptions {
+export interface PageOptions {
   title: string
-  breadcrumbs?: IBreadcrumbItem[]
+  breadcrumbs?: BreadcrumbItem[]
 }
 
-export function useAsPage(options: IPageOptions) {
+export function useAsPage(options: PageOptions) {
   const { setPageTitle, setBreadcrumbs, clearBreadcrumbs } = useStore('layout')
 
   useEffect(() => {

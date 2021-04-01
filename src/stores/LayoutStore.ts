@@ -1,14 +1,14 @@
 import { action, makeObservable, observable } from 'mobx'
 import React from 'react'
 
-export interface IBreadcrumbItem {
+export interface BreadcrumbItem {
   title: string
   routePath?: string
   icon?: React.ReactNode
 }
 
 export class LayoutStore {
-  @observable breadcrumbs: IBreadcrumbItem[] = []
+  @observable breadcrumbs: BreadcrumbItem[] = []
 
   @observable pageTitle = ''
 
@@ -17,7 +17,7 @@ export class LayoutStore {
   }
 
   @action.bound
-  setBreadcrumbs(items: IBreadcrumbItem[]) {
+  setBreadcrumbs(items: BreadcrumbItem[]) {
     this.breadcrumbs = items
   }
 

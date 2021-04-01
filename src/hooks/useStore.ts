@@ -1,5 +1,5 @@
 import { useContext, createContext } from 'react'
-import createStores, { AppStores } from '../createStores'
+import createStores, { AppStores } from '../shared/createStores'
 
 export const appStores = createStores()
 const storesContext = createContext<AppStores>(appStores)

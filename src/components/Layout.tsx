@@ -13,8 +13,10 @@ const Layout: FunctionComponent = ({ children }) => {
         <LayoutHeader />
         <Content
           style={{
-            margin: '12px 12px 0',
-            padding: 0,
+            padding: '12px 12px 0',
+            width: '100%',
+            maxWidth: 1200,
+            margin: '0 auto',
           }}
         >
           {children}
