@@ -1,10 +1,12 @@
-import { LayoutStore } from './stores/LayoutStore'
+import { LayoutStore } from '../stores/LayoutStore'
+import { PlantStore } from '../stores/PlantStore'
 
 /**
  * List with all stores.
  */
 export interface AppStores {
   layout: LayoutStore
+  plant: PlantStore
 }
 
 /**
@@ -13,6 +15,7 @@ export interface AppStores {
 function createStores(): AppStores {
   return {
     layout: new LayoutStore(),
+    plant: new PlantStore(),
   }
 }
 
