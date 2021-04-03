@@ -11,8 +11,8 @@
 - [x] Create the login interface integrated with Auth0
 - [x] Setup MirageJs as local simulated backend
 - [x] Create the Plants/Herbs CRUD with Formik and Yup
-- [ ] Create the Dashboard 🕘
-- [ ] Enhance with optional requirements ✨
+- [x] Create the Dashboard 
+- [x] Enhance with optional requirements ✨ 🕘
 
 ### Let's code!
 

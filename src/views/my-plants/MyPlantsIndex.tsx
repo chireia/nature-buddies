@@ -2,20 +2,21 @@ import { DeleteTwoTone, HeartOutlined } from '@ant-design/icons'
 import { Button, Popconfirm, Spin, Table } from 'antd'
 import Column from 'antd/lib/table/Column'
 import { observer } from 'mobx-react-lite'
+import moment from 'moment'
 import React, { FunctionComponent, useEffect } from 'react'
 import { Panel, PanelTitle } from '../../components/styled/Panel'
 import { useAsPage } from '../../hooks/useAsPage'
 import { useStore } from '../../hooks/useStore'
-import { Plant, PlantDataPoint } from '../../interfaces/plants'
+import { Plant, PlantDataPoint } from '../../interfaces/plant'
 import { MyPlantDataPointModal } from './MyPlantDataPointModal'
 import { MyPlantFormModal } from './MyPlantFormModal'
 
 const MyPlantsIndex: FunctionComponent = observer(() => {
   const { loadPlants, removePlant, isLoadingPlant, plants } = useStore('plant')
 
-  const getLastDate = (dataPointList: PlantDataPoint[]) => {
-    dataPointList
-    return '-'
+  const getLastDate = (dataPoints: PlantDataPoint[]) => {
+    if (!dataPoints.length) return '-'
+    return moment(dataPoints[dataPoints.length - 1]?.date).format('L')
   }
 
   const handleRemovePlant = async (plantId: string) => {

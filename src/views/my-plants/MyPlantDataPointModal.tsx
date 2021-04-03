@@ -24,7 +24,7 @@ import {
   Plant,
   PlantDataPoint,
   PlantDataPointFormData,
-} from '../../interfaces/plants'
+} from '../../interfaces/plant'
 
 interface MyPlantDataPointModalProps {
   plant: Plant
@@ -131,7 +131,7 @@ export const MyPlantDataPointModal: FunctionComponent<MyPlantDataPointModalProps
       <>
         <Modal
           title={`${plant.name} - Status`}
-          width={730}
+          width={780}
           okText='Submit'
           cancelText='Close'
           visible={visible}
@@ -198,7 +198,7 @@ export const MyPlantDataPointModal: FunctionComponent<MyPlantDataPointModalProps
                       value={values.soilMoisture}
                     />
                   </Form.Item>
-                  <Row gutter={14}>
+                  <Row gutter={14} justify='space-between'>
                     <Col>
                       <Form.Item
                         hasFeedback
@@ -257,8 +257,6 @@ export const MyPlantDataPointModal: FunctionComponent<MyPlantDataPointModalProps
                         />
                       </Form.Item>
                     </Col>
-                  </Row>
-                  <Row gutter={14}>
                     <Col>
                       <Form.Item
                         hasFeedback

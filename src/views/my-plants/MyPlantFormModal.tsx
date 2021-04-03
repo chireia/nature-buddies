@@ -5,7 +5,7 @@ import { observer } from 'mobx-react-lite'
 import React, { FunctionComponent, useState } from 'react'
 import * as Yup from 'yup'
 import { useStore } from '../../hooks/useStore'
-import { PlantFormData } from '../../interfaces/plants'
+import { PlantFormData } from '../../interfaces/plant'
 
 export const MyPlantFormModal: FunctionComponent = observer(() => {
   const { isAddingPlant, addPlant, loadPlants } = useStore('plant')
