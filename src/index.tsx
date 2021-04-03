@@ -12,12 +12,15 @@ import './index.css'
 import reportWebVitals from './reportWebVitals'
 import { makeServer } from './server'
 
+// Antd configs
 Spin.setDefaultIndicator(<LoadingOutlined style={{ fontSize: 24 }} spin />)
 
+// MobX configs
 configure({
   enforceActions: 'never',
 })
 
+// Mirage Configs
 makeServer()
 
 ReactDOM.render(

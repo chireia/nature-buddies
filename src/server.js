@@ -38,12 +38,20 @@ export function makeServer() {
     },
 
     seeds(server) {
-      const lettuce = server.create('plant', { name: 'Lettuce', type: 'Leaf' })
-      server.create('plant', { name: 'Tomato', type: 'Cherry' })
+      const carrot = server.create('plant', {
+        name: 'Carrot 🥕',
+        type: 'Danvers',
+      })
+      const lettuce = server.create('plant', {
+        name: 'Lettuce 🥬',
+        type: 'Leaf',
+      })
+      server.create('plant', { name: 'Tomato 🍅', type: 'Cherry' })
+      server.create('plant', { name: 'Sunflower 🌻', type: 'Annuus' })
       server.create('dataPoint', {
         plant: lettuce,
-        date: '2021-04-01T12:24:31.987Z',
-        soilMoisture: 100,
+        date: '2021-04-01T12:00:00.000Z',
+        soilMoisture: 55,
         soilTemperatureF: 75.2,
         soilTemperatureC: 24,
         airTemperatureF: 78.8,
@@ -51,8 +59,8 @@ export function makeServer() {
       })
       server.create('dataPoint', {
         plant: lettuce,
-        date: '2021-04-03T12:24:31.987Z',
-        soilMoisture: 100,
+        date: '2021-04-02T12:00:00.000Z',
+        soilMoisture: 48,
         soilTemperatureF: 75.2,
         soilTemperatureC: 24,
         airTemperatureF: 78.8,
@@ -60,12 +68,75 @@ export function makeServer() {
       })
       server.create('dataPoint', {
         plant: lettuce,
-        date: '2021-04-02T12:24:31.987Z',
-        soilMoisture: 100,
+        date: '2021-04-03T12:00:00.000Z',
+        soilMoisture: 39,
+        soilTemperatureF: 77,
+        soilTemperatureC: 25,
+        airTemperatureF: 82.4,
+        airTemperatureC: 28,
+      })
+      server.create('dataPoint', {
+        plant: lettuce,
+        date: '2021-04-04T12:00:00.000Z',
+        soilMoisture: 82,
         soilTemperatureF: 75.2,
         soilTemperatureC: 24,
         airTemperatureF: 78.8,
         airTemperatureC: 26,
+      })
+      server.create('dataPoint', {
+        plant: lettuce,
+        date: '2021-04-05T12:00:00.000Z',
+        soilMoisture: 75,
+        soilTemperatureF: 77,
+        soilTemperatureC: 25,
+        airTemperatureF: 82.4,
+        airTemperatureC: 28,
+      })
+      server.create('dataPoint', {
+        plant: carrot,
+        date: '2021-04-01T12:00:00.000Z',
+        soilMoisture: 74,
+        soilTemperatureF: 75.2,
+        soilTemperatureC: 24,
+        airTemperatureF: 78.8,
+        airTemperatureC: 26,
+      })
+      server.create('dataPoint', {
+        plant: carrot,
+        date: '2021-04-02T12:00:00.000Z',
+        soilMoisture: 78,
+        soilTemperatureF: 75.2,
+        soilTemperatureC: 24,
+        airTemperatureF: 78.8,
+        airTemperatureC: 26,
+      })
+      server.create('dataPoint', {
+        plant: carrot,
+        date: '2021-04-03T12:00:00.000Z',
+        soilMoisture: 65,
+        soilTemperatureF: 77,
+        soilTemperatureC: 25,
+        airTemperatureF: 82.4,
+        airTemperatureC: 28,
+      })
+      server.create('dataPoint', {
+        plant: carrot,
+        date: '2021-04-04T12:00:00.000Z',
+        soilMoisture: 69,
+        soilTemperatureF: 75.2,
+        soilTemperatureC: 24,
+        airTemperatureF: 78.8,
+        airTemperatureC: 26,
+      })
+      server.create('dataPoint', {
+        plant: carrot,
+        date: '2021-04-05T12:00:00.000Z',
+        soilMoisture: 82,
+        soilTemperatureF: 77,
+        soilTemperatureC: 25,
+        airTemperatureF: 82.4,
+        airTemperatureC: 28,
       })
     },
 
@@ -107,6 +178,7 @@ export function makeServer() {
 
       this.passthrough()
       this.passthrough('https://chireia.us.auth0.com/**')
+      this.passthrough('https://api.openweathermap.org/**')
     },
   })
 

@@ -3,8 +3,8 @@ import {
   PlantDataPoint,
   PlantDataPointFormData,
   PlantFormData,
-} from '../../interfaces/plants'
-import { serverClient } from '../serverClient'
+} from '../../interfaces/plant'
+import { serverClient } from '../apiClients'
 
 export async function fetchPlants() {
   try {

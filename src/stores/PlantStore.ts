@@ -1,9 +1,11 @@
+import { message } from 'antd'
 import { action, makeObservable, observable } from 'mobx'
+import moment from 'moment'
 import {
   Plant,
   PlantDataPointFormData,
   PlantFormData,
-} from '../interfaces/plants'
+} from '../interfaces/plant'
 import {
   deletePlant,
   deletePlantDataPoint,
@@ -65,6 +67,7 @@ export class PlantStore {
     try {
       this.isAddingPlant = true
       const plant = await postPlant(plantData)
+      message.success(`Success: ${plant.name} added!`)
 
       return plant
     } finally {
@@ -78,6 +81,7 @@ export class PlantStore {
       this.isAddingDataPoint = true
       const dataPoint = await postPlantDataPoint(dataPointData)
 
+      message.success(`Success: ${moment(dataPoint.date).format('L')} saved!`)
       return dataPoint
     } finally {
       this.isAddingDataPoint = false
