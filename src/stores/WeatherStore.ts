@@ -1,3 +1,4 @@
+import { message } from 'antd'
 import { action, makeObservable, observable } from 'mobx'
 import {
   WeatherInfo,
@@ -44,6 +45,7 @@ export class WeatherStore {
       () => {
         this.geoLocationPosition = {} as GeolocationPosition
         this.locationPermissionStatus = 'denied'
+        message.error('Your location is blocked by your browser')
       }
     )
   }
